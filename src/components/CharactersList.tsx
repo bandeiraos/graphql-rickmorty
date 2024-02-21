@@ -33,6 +33,12 @@ const styles = {
         justifyContent: 'center',
         gap: 4,
         marginTop: 12
+    },
+    btn: {
+        background: 'none',
+        border: 'none',
+        textDecoration: 'underline',
+        cursor: 'pointer'
     }
 };
 
@@ -55,8 +61,9 @@ const CharactersList = ({ page, handleChangePage, handleChangeCharacterId }: Cha
                         <button
                             key={char.id}
                             onClick={() => handleChangeCharacterId(char.id)}
+                            style={styles.btn}
                         >
-                            {char.name}
+                            {char.id} - {char.name}
                         </button>
                     ))
                 }
